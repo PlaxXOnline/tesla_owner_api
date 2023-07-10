@@ -1,3 +1,8 @@
+## 0.0.4
+
+* added energysites methods
+* added energysites commands
+
 ## 0.0.3
 
 * added powerwalls

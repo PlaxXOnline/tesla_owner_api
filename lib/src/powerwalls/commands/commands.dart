@@ -16,6 +16,7 @@ class Commands {
   /// Returns a [Response] object containing the backup reserve data if the request is successful.
   ///
   /// [batteryId] is the identifier of the battery for which the backup reserve information is to be fetched.
+  /// you can get [batteryId] from the products list.
   ///
   /// **Note:** The specifics of the request body and the response for this endpoint
   /// have not been fully discovered or documented as of now. This function's behavior
@@ -56,6 +57,7 @@ class Commands {
   /// Returns a [Response] object containing the site name data if the request is successful.
   ///
   /// [batteryId] is the identifier of the battery for which the site name is to be fetched.
+  /// you can get [batteryId] from the products list.
   ///
   /// **Note:** The specifics of the request body and the response for this endpoint
   /// have not been fully discovered or documented as of now. This function's behavior
@@ -96,6 +98,7 @@ class Commands {
   /// Returns a [Response] object containing the operation mode data if the request is successful.
   ///
   /// [batteryId] is the identifier of the battery for which the operation mode is to be fetched.
+  /// you can get [batteryId] from the products list.
   ///
   /// **Note:** The specifics of the request body and the response for this endpoint
   /// have not been fully discovered or documented as of now. This function's behavior

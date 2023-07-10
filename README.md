@@ -109,9 +109,118 @@ var response = await teslaAPI.user.sendCommandToken('your_command_token_here');
 <details>
   <summary>EnergySites</summary>
 
-### State and Settings
+## State and Settings
 
-### Commands
+#### Future<Response> siteStatusSummary(int siteId)
+
+Fetches the status summary for a specific site. Returns a `Response` object containing the data. Throws an `Exception if the request fails.
+
+##### Parameters
+
+- `siteId`: The ID of the site.
+
+```dart
+Response siteStatusSummary = await teslaAPI.energysites.siteStatusSummary('your_site_id_here');
+```
+
+#### Future<Response> siteLiveStatusData(int siteId)
+
+Fetches the live status data for a specific site. Returns a `Response` object containing the data. Throws an `Exception if the request fails.
+
+##### Parameters
+
+- `siteId`: The ID of the site.
+
+```dart
+Response siteLiveStatusData = await teslaAPI.energysites.siteLiveStatusData('your_site_id_here');
+```
+
+#### Future<Response> siteConfiguration(int siteId)
+
+Fetches the configuration information for a specific site. Returns a `Response` object containing the data. Throws an `Exception if the request fails.
+
+##### Parameters
+
+- `siteId`: The ID of the site.
+
+```dart
+Response siteConfiguration = await teslaAPI.energysites.siteConfiguration('your_site_id_here');
+```
+
+#### Future<Response> siteHistory(int siteId)
+
+Fetches the historical data for a specific site. Returns a `Response` object containing the data. Throws an `Exception if the request fails.
+
+##### Parameters
+
+- `siteId`: The ID of the site.
+
+```dart
+Response siteHistory = await teslaAPI.energysites.siteHistory('your_site_id_here');
+```
+
+## Commands
+
+#### Future<Response> backupEnergyReserve(int siteId)
+
+Sets the backup energy reserve for a specific energy site. Returns a `Response` object containing the data. Throws an `Exception if the request fails.
+
+##### Parameters
+
+- `siteId`: The ID of the site.
+
+```dart
+Response reserveResult = await teslaAPI.energysites.commands.backupEnergyReserve('your_site_id_here');
+```
+
+#### Future<Response> siteName(int siteId)
+
+Fetches the historical data for a specific site. Returns a `Response` object containing the data. Throws an `Exception if the request fails.
+
+##### Parameters
+
+- `siteId`: The ID of the site.
+
+```dart
+Response siteName = await teslaAPI.energysites.commands.siteName('your_site_id_here');
+```
+
+#### Future<Response> operationMode(int siteId)
+
+Fetches the operation mode for a specific site. Returns a `Response` object containing the data. Throws an `Exception if the request fails.
+
+##### Parameters
+
+- `siteId`: The ID of the site.
+
+```dart
+Response operationMode = await teslaAPI.energysites.commands.operationMode('your_site_id_here');
+```
+
+#### Future<Response> timeOfUseSettings(int siteId)
+
+Fetches the time of use settings for a specific site. Returns a `Response` object containing the data. Throws an `Exception if the request fails.
+
+##### Parameters
+
+- `siteId`: The ID of the site.
+
+```dart
+Response timeOfUseSettings = await teslaAPI.energysites.commands.timeOfUseSettings('your_site_id_here');
+```
+
+#### Future<Response> stormMode(int siteId)
+
+Fetches the storm mode for a specific site. Returns a `Response` object containing the data. Throws an `Exception if the request fails.
+
+##### Parameters
+
+- `siteId`: The ID of the site.
+
+```dart
+Response stormMode = await teslaAPI.energysites.commands.stormMode('your_site_id_here');
+```
+
 
 </details>
 <details>

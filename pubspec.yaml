@@ -1,6 +1,6 @@
 name: tesla_owner_api
 description: Unleash the power of your Tesla products with the Tesla Owner API package. Interact with vehicles, Powerwalls, energy sites, and more. Ideal for Tesla owners and enthusiasts.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/PlaxXOnline/tesla_owner_api
 issue_tracker: https://github.com/PlaxXOnline/tesla_owner_api/issues
 
