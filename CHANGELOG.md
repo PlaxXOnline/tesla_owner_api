@@ -1,3 +1,8 @@
+## 1.0.0
+
+* added energysites to example
+* push to major version
+
 ## 0.0.4
 
 * added energysites methods

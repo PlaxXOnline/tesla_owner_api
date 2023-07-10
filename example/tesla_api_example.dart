@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:tesla_owner_api/models/models.dart';
 import 'package:tesla_owner_api/tesla_owner_api.dart';
 
@@ -103,5 +104,52 @@ class Example {
         await teslaAPI.vehicles.commands.setSpeedLimit('your_vehicle_id_here');
     ResponseModel clearSpeedLimitPIN = await teslaAPI.vehicles.commands
         .clearSpeedLimitPIN('your_vehicle_id_here');
+  }
+
+  _powerwalls() async {
+    int your_battery_id_here = 1;
+
+    //State and Settings
+    Response batteryStatus =
+        await teslaAPI.powerWalls.getBatteryStatus(your_battery_id_here);
+    Response batteryData =
+        await teslaAPI.powerWalls.getBatteryData(your_battery_id_here);
+    Response batteryPowerTimeSeriesData = await teslaAPI.powerWalls
+        .getBatteryPowerTimeSeriesData(your_battery_id_here);
+    Response batteryEnergyTimeSeriesData = await teslaAPI.powerWalls
+        .getBatteryEnergyTimeSeriesData(your_battery_id_here);
+
+    //Commands
+    Response backupBatteryReserve = await teslaAPI.powerWalls.commands
+        .backupBatteryReserve(your_battery_id_here);
+    Response batterySiteName = await teslaAPI.powerWalls.commands
+        .batterySiteName(your_battery_id_here);
+    Response batteryOperationMode = await teslaAPI.powerWalls.commands
+        .batteryOperationMode(your_battery_id_here);
+  }
+
+  _energysites() async {
+    int your_site_id_here = 1;
+    //State and Settings
+    Response siteStatusSummary =
+        await teslaAPI.energySites.siteStatusSummary(your_site_id_here);
+    Response siteLiveStatusData =
+        await teslaAPI.energySites.siteLiveStatusData(your_site_id_here);
+    Response siteConfiguration =
+        await teslaAPI.energySites.siteConfiguration(your_site_id_here);
+    Response siteHistory =
+        await teslaAPI.energySites.siteHistory(your_site_id_here);
+
+    //Commands
+    Response reserveResult = await teslaAPI.energySites.commands
+        .backupEnergyReserve(your_site_id_here);
+    Response siteName =
+        await teslaAPI.energySites.commands.siteName(your_site_id_here);
+    Response operationMode =
+        await teslaAPI.energySites.commands.operationMode(your_site_id_here);
+    Response timeOfUseSettings = await teslaAPI.energySites.commands
+        .timeOfUseSettings(your_site_id_here);
+    Response stormMode =
+        await teslaAPI.energySites.commands.stormMode(your_site_id_here);
   }
 }
