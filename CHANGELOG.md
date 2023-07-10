@@ -1,3 +1,9 @@
+## 0.0.3
+
+* added powerwalls
+* added powerwalls commands
+* added more comments
+
 ## 0.0.2
 
 * added example folder

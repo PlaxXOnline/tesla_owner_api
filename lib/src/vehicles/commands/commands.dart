@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
 import 'package:tesla_owner_api/models/models.dart';
-import 'package:tesla_owner_api/models/sun_roof_states_model.dart';
 
 class Commands {
   final String _token;

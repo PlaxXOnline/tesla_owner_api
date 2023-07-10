@@ -117,9 +117,93 @@ var response = await teslaAPI.user.sendCommandToken('your_command_token_here');
 <details>
   <summary>PowerWalls</summary>
 
-### State and Settings
+## State and Settings
 
-### Commands
+#### Future<Response> getBatteryStatus(int batteryId)
+
+Fetch the current Battery Status. Returns a `Response` object containing the data. Throws an `Exception if the request fails.
+
+##### Parameters
+
+- `batteryId`: The ID of the battery.
+
+```dart
+Response batteryStatus = await teslaAPI.powerwalls.commands.getBatteryStatus('your_battery_id_here');
+```
+
+#### Future<Response> getBatteryData(int batteryId)
+
+Fetch the current Battery Data. Returns a `Response` object containing the data. Throws an `Exception if the request fails.
+
+##### Parameters
+
+- `batteryId`: The ID of the battery.
+
+```dart
+Response batteryData = await teslaAPI.powerwalls.commands.getBatteryData('your_battery_id_here');
+```
+
+#### Future<Response> getBatteryPowerTimeSeriesData(int batteryId)
+
+Fetch the Battery Power Time-series Data. Returns a `Response` object containing the data. Throws an `Exception if the request fails.
+
+##### Parameters
+
+- `batteryId`: The ID of the battery.
+
+```dart
+Response batteryPowerTimeSeriesData = await teslaAPI.powerwalls.commands.getBatteryPowerTimeSeriesData('your_battery_id_here');
+```
+
+#### Future<Response> getBatteryEnergyTimeSeriesData(int batteryId)
+
+Fetch the Battery Power Time-series Data. Returns a `Response` object containing the data. Throws an `Exception if the request fails.
+
+##### Parameters
+
+- `batteryId`: The ID of the battery.
+
+```dart
+Response batteryEnergyTimeSeriesData = await teslaAPI.powerwalls.commands.getBatteryEnergyTimeSeriesData('your_battery_id_here');
+```
+
+## Commands
+
+#### Future<Response> backupBatteryReserve(int batteryId)
+
+Backup the Battery Reserve. Returns a `Response` object containing the data. Throws an `Exception if the request fails.
+
+##### Parameters
+
+- `batteryId`: The ID of the battery.
+
+```dart
+Response backupBatteryReserve = await teslaAPI.powerwalls.commands.batterySiteName('your_battery_id_here');
+```
+
+#### Future<Response> batterySiteName(int batteryId)
+
+Fetches the site name of a specific battery. Returns a `Response` object containing the data. Throws an `Exception if the request fails.
+
+##### Parameters
+
+- `batteryId`: The ID of the battery.
+
+```dart
+Response batterySiteName = await teslaAPI.powerwalls.commands.backupBatteryReserve('your_battery_id_here');
+```
+
+#### Future<Response> batteryOperationMode(int batteryId)
+
+Fetches the operation mode of a specific battery. Returns a `Response` object containing the data. Throws an `Exception if the request fails.
+
+##### Parameters
+
+- `batteryId`: The ID of the battery.
+
+```dart
+Response batteryOperationMode = await teslaAPI.powerwalls.commands.batteryOperationMode('your_battery_id_here');
+```
 
 </details>
 <details>
