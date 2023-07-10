@@ -1,7 +1,6 @@
 library tesla_owner_api;
 
-/// A Calculator.
-class Calculator {
+class TeslaOwnerAPI {
   /// Returns [value] plus 1.
   int addOne(int value) => value + 1;
 }

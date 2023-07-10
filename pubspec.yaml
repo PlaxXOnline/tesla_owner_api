@@ -1,13 +1,15 @@
 name: tesla_owner_api
-description: A new Flutter package project.
+description: This Flutter package handles the inofficial Tesla Owner API
 version: 0.0.1
-homepage:
+homepage: https://github.com/PlaxXOnline/tesla_owner_api
+issue_tracker: https://github.com/PlaxXOnline/tesla_owner_api/issues
 
 environment:
   sdk: '>=3.0.5 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
+  dio: ^5.2.1+1
   flutter:
     sdk: flutter
 
