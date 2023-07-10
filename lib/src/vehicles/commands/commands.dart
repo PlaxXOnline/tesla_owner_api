@@ -10,7 +10,7 @@ class Commands {
   /// Wakes up the vehicle.
   ///
   /// [id] is the identifier of the vehicle.
-  Future<VehicleList> wakeUp(String id) async {
+  Future<ResponseModel> wakeUp(String id) async {
     try {
       var response = await _dio.post(
         'https://owner-api.teslamotors.com/api/1/vehicles/$id/wake_up',
@@ -21,7 +21,7 @@ class Commands {
         ),
       );
       if (response.statusCode == 200) {
-        return VehicleList.fromJson(response.data);
+        return ResponseModel.fromJson(response.data);
       } else {
         throw Exception('Failed to wake up the vehicle');
       }

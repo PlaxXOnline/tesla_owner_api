@@ -1,5 +1,6 @@
 library tesla_owner_api;
 
+import 'package:tesla_owner_api/models/models.dart';
 import 'package:tesla_owner_api/src/auth/auth.dart';
 import 'package:tesla_owner_api/src/energysites/energysites.dart';
 import 'package:tesla_owner_api/src/powerwalls/powerwalls.dart';
@@ -28,11 +29,11 @@ class TeslaAPI {
   /// This constructor initializes various properties for accessing different parts of the Tesla Owner API.
   ///
   /// - [token]: The access token to authenticate requests.
-  TeslaAPI(String token) {
-    energySites = EnergySites(token);
-    powerWalls = PowerWalls(token);
-    products = Products(token);
-    user = User(token);
-    vehicles = Vehicles(token);
+  TeslaAPI(TeslaAuthToken token) {
+    energySites = EnergySites(token.accessToken);
+    powerWalls = PowerWalls(token.accessToken);
+    products = Products(token.accessToken);
+    user = User(token.accessToken);
+    vehicles = Vehicles(token.accessToken);
   }
 }

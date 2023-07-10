@@ -1,5 +1,9 @@
 # Tesla Owner API
 
+## Warning
+
+Please note that this is an unofficial API, using https://www.teslaapi.io/, and therefore, we cannot guarantee its functionality. It's recommended to use it with caution as changes in the official API can break this library. Always ensure you're adhering to Tesla's terms of service while using this API.
+
 [![pub package](https://img.shields.io/pub/v/tesla_owner_api.svg)](https://pub.dev/packages/tesla_owner_api) [![GitHub stars](https://img.shields.io/github/stars/PlaxXOnline/tesla_owner_api.svg?style=social&label=Star)](https://github.com/PlaxXOnline/tesla_owner_api)
 
 The `TeslaAPI` is the main class for accessing the Tesla Owner API. It includes properties for authentication and for accessing different parts of the Tesla Owner API.
@@ -22,7 +26,7 @@ Creates a `TeslaAPI` instance with authentication. This constructor initializes 
 
 ```dart
 var teslaAPIAuth = TeslaAPI.auth();
-String accessToken = teslaAPI.getAccessToken(String email, String password,
+String accessToken = teslaAPIAuth.getAccessToken(String email, String password,
     String clientId, String clientSecret);
 ```
 
@@ -255,7 +259,7 @@ GuiSettings guiSettings = await teslaAPI.vehicles.getGUISettings('your_vehicle_i
 
 ## Commands
 
-#### Future<VehicleList> wakeUp(String id)
+#### Future<ResponseModel> wakeUp(String id)
 
 Wakes up the vehicle. Returns a `ResponseModel` object containing the data. Throws an `Exception if the request fails.
 

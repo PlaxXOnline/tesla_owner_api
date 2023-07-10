@@ -8,3 +8,4 @@ export 'charge_state_model.dart';
 export 'drive_state_model.dart';
 export 'vehicle_config_model.dart';
 export 'response_model.dart';
+export 'sun_roof_states_model.dart';

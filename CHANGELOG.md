@@ -1,3 +1,13 @@
+## 0.0.2
+
+* added example folder
+* added License
+
 ## 0.0.1
 
-* TODO: Describe initial release.
+* added models
+* added auth methods
+* added user methods
+* added vehicle methods
+* added vehicle commands
+* added product list
